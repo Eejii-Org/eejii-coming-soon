@@ -1,5 +1,4 @@
 "use client";
-import axios from "axios";
 import { Facebook, Instagram, Mail } from "@/icons";
 import Image from "next/image";
 import { useState } from "react";
