@@ -3,6 +3,7 @@ import { Facebook, Instagram, Mail } from "@/icons";
 import Image from "next/image";
 import { useState } from "react";
 import { registerCustomer } from "@/actions";
+import Link from "next/link";
 
 export default function Home() {
   const [success, setSuccess] = useState<string | null>(null);
@@ -34,7 +35,7 @@ export default function Home() {
       />
       <div className="mx-auto container px-4 relative my-16 flex flex-col justify-between flex-1">
         <div className="flex flex-row justify-between">
-          <h3 className="raleway text-lg md:text-2xl">
+          <h3 className="raleway text-lg md:text-2xl text-white">
             Let’s Create An Earth
             <br />
             <span className="md:pl-16">Full Of Love Together</span>
@@ -51,12 +52,12 @@ export default function Home() {
         </div>
         <div>
           <div className="flex flex-col gap-2 text-sm md:text-base">
-            <h1 className="font-medium">
+            <h1 className="font-medium text-white">
               Монгол дахь хүмүүнлэгийн үйл ажиллагаа болон сайн дурынхныг дэмжих
             </h1>
-            <h1 className="font-bold">ALL IN ONE SYSTEM</h1>
+            <h1 className="font-bold text-white">ALL IN ONE SYSTEM</h1>
           </div>
-          <h2 className="raleway text-2xl sm:text-3xl lg:text-[80px] lg:leading-normal tracking-normal py-3 lg:py-0">
+          <h2 className="raleway text-2xl sm:text-3xl lg:text-[80px] lg:leading-normal tracking-normal py-3 lg:py-0 text-white">
             ТУН УДАХГҮЙ
           </h2>
           <div className="flex flex-col items-center justify-center gap-4 pt-2 pb-32">
@@ -84,21 +85,30 @@ export default function Home() {
               ) : (
                 <p className="text-[#FF0000]">Алдаа заалаа</p>
               ))}
-            <p className="font-medium text-sm md:text-base">
+            <p className="font-medium text-sm md:text-base text-white">
               ХАЙР ДҮҮРЭН ЕРТӨНЦИЙГ ХАМТДАА БҮТЭЭЕ
             </p>
           </div>
         </div>
         <div className="flex items-center justify-center gap-4">
-          <div className="p-2 rounded-full bg-white cursor-pointer">
+          <Link
+            href="https://www.facebook.com/eejii.org"
+            className="p-2 rounded-full bg-white cursor-pointer"
+          >
             <Facebook />
-          </div>
-          <div className="p-2 rounded-full bg-white cursor-pointer">
+          </Link>
+          <Link
+            href="https://www.instagram.com/mother_project_mn"
+            className="p-2 rounded-full bg-white cursor-pointer"
+          >
             <Instagram />
-          </div>
-          <div className="p-2 rounded-full bg-white cursor-pointer">
+          </Link>
+          <Link
+            href="mailto:info@eejii.org"
+            className="p-2 rounded-full bg-white cursor-pointer"
+          >
             <Mail />
-          </div>
+          </Link>
         </div>
       </div>
     </div>
