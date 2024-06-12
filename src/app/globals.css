@@ -16,6 +16,16 @@
   }
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("/Raleway-Regular.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+.raleway {
+  font-family: "Raleway";
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
